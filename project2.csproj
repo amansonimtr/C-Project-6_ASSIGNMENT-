@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F24AE6B6-A77B-43DF-81D3-8588BB7AEAE7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>project2</RootNamespace>
+    <AssemblyName>project2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FacultydatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FacultydatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FacultydatabaseFaculty.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FacultydatabaseFaculty.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FacultydatabaseFees.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FacultydatabaseFees.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FacultydatabaseMarks.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FacultydatabaseMarks.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FacultydatabaseSubject.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FacultydatabaseSubject.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Facultyform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facultyform.Designer.cs">
+      <DependentUpon>Facultyform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fees.Designer.cs">
+      <DependentUpon>Fees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Marks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Marks.Designer.cs">
+      <DependentUpon>Marks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registationfrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registationfrom.Designer.cs">
+      <DependentUpon>Registationfrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="studentform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="studentform.Designer.cs">
+      <DependentUpon>studentform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="subjectform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="subjectform.Designer.cs">
+      <DependentUpon>subjectform.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Facultyform.resx">
+      <DependentUpon>Facultyform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fees.resx">
+      <DependentUpon>Fees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Marks.resx">
+      <DependentUpon>Marks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Registationfrom.resx">
+      <DependentUpon>Registationfrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="studentform.resx">
+      <DependentUpon>studentform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="subjectform.resx">
+      <DependentUpon>subjectform.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="FacultydatabaseDataSet.xsc">
+      <DependentUpon>FacultydatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FacultydatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FacultydatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FacultydatabaseDataSet.xss">
+      <DependentUpon>FacultydatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FacultydatabaseFaculty.xsc">
+      <DependentUpon>FacultydatabaseFaculty.xsd</DependentUpon>
+    </None>
+    <None Include="FacultydatabaseFaculty.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FacultydatabaseFaculty.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FacultydatabaseFaculty.xss">
+      <DependentUpon>FacultydatabaseFaculty.xsd</DependentUpon>
+    </None>
+    <None Include="FacultydatabaseFees.xsc">
+      <DependentUpon>FacultydatabaseFees.xsd</DependentUpon>
+    </None>
+    <None Include="FacultydatabaseFees.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FacultydatabaseFees.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FacultydatabaseFees.xss">
+      <DependentUpon>FacultydatabaseFees.xsd</DependentUpon>
+    </None>
+    <None Include="FacultydatabaseMarks.xsc">
+      <DependentUpon>FacultydatabaseMarks.xsd</DependentUpon>
+    </None>
+    <None Include="FacultydatabaseMarks.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FacultydatabaseMarks.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FacultydatabaseMarks.xss">
+      <DependentUpon>FacultydatabaseMarks.xsd</DependentUpon>
+    </None>
+    <None Include="FacultydatabaseSubject.xsc">
+      <DependentUpon>FacultydatabaseSubject.xsd</DependentUpon>
+    </None>
+    <None Include="FacultydatabaseSubject.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FacultydatabaseSubject.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FacultydatabaseSubject.xss">
+      <DependentUpon>FacultydatabaseSubject.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
